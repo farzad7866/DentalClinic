@@ -2,12 +2,400 @@
 {% load static %}
 
 {% block content %}
+<!-- ======================= DENTAL HERO SECTION ======================= -->
+<!-- ======================= DENTAL HERO SECTION START ======================= -->
+<section class="ads-hero">
+
+    <!-- Background Blur -->
+    <div class="blur blur-left"></div>
+    <div class="blur blur-right"></div>
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Side -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                <h1>
+                    Healthy Smiles <br>
+                    Start With Expert Dental Care
+                </h1>
+
+                <p>
+                    We provide exceptional dental care with experienced dentists,
+                    advanced technology, and personalized treatments to help you
+                    achieve a healthy, confident smile.
+                </p>
+
+                <div class="hero-stats">
+
+                    <div class="stat-card">
+                        <h3>20+</h3>
+                        <span>Years Experience</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>700+</h3>
+                        <span>Happy Patients</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>40+</h3>
+                        <span>Dentists</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-6">
+
+                <div class="hero-art">
+
+                    <!-- Decorative Shapes -->
+                    <div class="circle circle1"></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+
+                    <div class="shape shape1"></div>
+                    <div class="shape shape2"></div>
+
+                    <!-- Floating Cards -->
+
+                    <div class="floating-card card1">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="">
+                        <h6>Dental Care</h6>
+                        <small>Modern Clinic</small>
+                    </div>
+
+                    <div class="floating-card card2">
+                        <img src="https://images.unsplash.com/photo-1588776814546-ec7e4d8b8d5b?w=300" alt="">
+                        <h6>Professional Team</h6>
+                        <small>Experienced Dentists</small>
+                    </div>
+
+                    <div class="floating-card card3">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=300" alt="">
+                        <h6>Advanced Equipment</h6>
+                        <small>Latest Technology</small>
+                    </div>
+
+                    <div class="floating-card card4">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=300" alt="">
+                        <h6>Healthy Smiles</h6>
+                        <small>Quality Treatment</small>
+                    </div>
+
+                    <div class="floating-card card5">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=300" alt="">
+                        <h6>Comfort Care</h6>
+                        <small>Patient First</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<style>
+
+/* ================= HERO ================= */
+
+.ads-hero{
+    position:relative;
+    overflow:hidden;
+    background:#f8fbff;
+    padding:110px 0;
+}
+
+/* Blur */
+
+.blur{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.45;
+    z-index:0;
+}
+
+.blur-left{
+    background:#00bcd4;
+    left:-180px;
+    top:80px;
+}
+
+.blur-right{
+    background:#4f8dff;
+    right:-180px;
+    bottom:50px;
+}
+
+.ads-hero .container{
+    position:relative;
+    z-index:5;
+}
+
+/* Left */
+
+.ads-hero h1{
+    font-size:58px;
+    font-weight:800;
+    line-height:1.15;
+    color:#1f2937;
+}
+
+.ads-hero p{
+    font-size:18px;
+    line-height:1.8;
+    color:#6b7280;
+    margin:30px 0 40px;
+    max-width:540px;
+}
+
+/* Stats */
+
+.hero-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    padding:20px;
+    min-width:150px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.stat-card h3{
+    color:#00b8b8;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.stat-card span{
+    color:#777;
+}
+
+/* Right */
+
+.hero-art{
+    position:relative;
+    height:560px;
+}
+
+/* Decorative Shapes */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+}
+
+.circle1{
+    width:320px;
+    height:320px;
+    background:#00bcd420;
+    top:60px;
+    right:80px;
+}
+
+.circle2{
+    width:170px;
+    height:170px;
+    background:#4f8dff20;
+    left:40px;
+    bottom:20px;
+}
+
+.circle3{
+    width:110px;
+    height:110px;
+    background:#00e5b520;
+    top:20px;
+    left:100px;
+}
+
+.shape{
+    position:absolute;
+    border-radius:35px;
+}
+
+.shape1{
+    width:260px;
+    height:260px;
+    background:#4f8dff12;
+    transform:rotate(25deg);
+    top:150px;
+    right:120px;
+}
+
+.shape2{
+    width:180px;
+    height:180px;
+    background:#00bcd412;
+    transform:rotate(-18deg);
+    left:70px;
+    bottom:70px;
+}
+
+/* Floating Cards */
+
+.floating-card{
+    position:absolute;
+    width:170px;
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.4);
+    border-radius:22px;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+    animation:float 4s ease-in-out infinite;
+}
+
+.floating-card img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #fff;
+    margin-bottom:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.floating-card h6{
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.floating-card small{
+    color:#666;
+}
+
+.card1{left:0;top:20px;}
+.card2{right:0;top:80px;animation-delay:.8s;}
+.card3{left:70px;bottom:100px;animation-delay:1.5s;}
+.card4{right:40px;bottom:20px;animation-delay:2.2s;}
+.card5{left:210px;top:240px;animation-delay:1s;}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-18px);}
+}
+
+/* Tablet */
+
+@media (max-width:991px){
+
+.ads-hero{
+    padding:80px 0;
+    text-align:center;
+}
+
+.ads-hero h1{
+    font-size:42px;
+}
+
+.ads-hero p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hero-stats{
+    justify-content:center;
+    margin-bottom:60px;
+}
+
+.hero-art{
+    height:500px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:767px){
+
+.ads-hero{
+    padding:70px 0;
+}
+
+.ads-hero h1{
+    font-size:34px;
+}
+
+.ads-hero p{
+    font-size:16px;
+}
+
+.hero-art{
+    height:420px;
+}
+
+.floating-card{
+    width:120px;
+    padding:14px;
+}
+
+.floating-card img{
+    width:55px;
+    height:55px;
+}
+
+.floating-card h6{
+    font-size:13px;
+}
+
+.floating-card small{
+    font-size:11px;
+}
+
+.card5{
+    display:none;
+}
+
+.circle1{
+    width:220px;
+    height:220px;
+}
+
+.circle2{
+    width:120px;
+    height:120px;
+}
+
+.blur{
+    width:250px;
+    height:250px;
+}
+
+.stat-card{
+    flex:1 1 100px;
+}
+
+}
+
+</style>
+<!-- ======================= DENTAL HERO SECTION END ======================= -->
+
+</style>
+<!-- ======================= MODERN HERO ADS SECTION END ======================= -->
   <!-- ***** Welcome Area Start ***** -->
   <section class="welcome-area">
     <!-- Welcome Slides -->
     <div class="welcome-slides owl-carousel">
       <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/1.jpg' %});">
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12">
@@ -93,7 +481,7 @@
               <h6>Friendly Staff</h6>
               <div id="bar3" class="barfiller">
                 <span class="tip"></span>
-                <span class="fill" data-percentage="85"></span>
+                <span class="fill" data-percentage="80"></span>
               </div>
             </div>
           </div>
@@ -208,7 +596,7 @@
               <!-- Single Service -->
               <div class="col-6 col-md-4">
                 <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s6.png' %}"alt="">
+                  <img src="{% static 'website/img/core-img/s1.png' %}"alt="">
                   <h6>Teeth Pain</h6>
                 </div>
               </div>
@@ -320,84 +708,6 @@
   </section>
   <!-- Dento Pricing Table Area End -->
 
-  <!-- Book An Oppointment Area Start -->
-  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center white">
-            <h2>Book An Apointment</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <!-- Appointment Form -->
-          <div class="appointment-form">
-            <form action="#" method="post">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-scheldule" class="form-control">
-                      <option value="Choose Your Scheldule">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-time" class="form-control">
-                      <option value="Choose Your Time">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="submit" class="btn dento-btn">Booking Now</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Book An Oppointment Area End -->
-
   <!-- ***** Dento Dentist Area Start ***** -->
   <section class="dentist-area section-padding-100-0">
     <div class="container">
@@ -408,7 +718,7 @@
             <h2>Our Dentist</h2>
             <div class="line"></div>
           </div>
-        </div>
+        </div>w
       </div>
 
       <div class="row">

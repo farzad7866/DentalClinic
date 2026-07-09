@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings as conf_settings
+from .models import Appointment
 
 def home(request):
     return render(request, 'website/home.html')
@@ -22,23 +23,43 @@ def blog_details(request):
     return render(request, 'website/blog_details.html')
 
 def contact(request):
-    if request.method == 'POST':
-        name = request.POST['message_name']
-        email = request.POST['message_email']
-        message = request.POST['message']
-        
-        #send email to default address
-        send_mail(
-            'Follow up required for - ' + name,
-            message,
-            email,
-            [conf_settings.CONTACT_US_FORM_EMAIL_TO],
-            fail_silently=False,
+
+    if request.method == "POST":
+
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        service = request.POST.get("service")
+        appointment_date = request.POST.get("appointment_date")
+        appointment_time = request.POST.get("appointment_time")
+        message = request.POST.get("message")
+
+        # Check whether the selected date and time are already booked.
+        if Appointment.objects.filter(
+            appointment_date=appointment_date,
+            appointment_time=appointment_time
+        ).exists():
+
+            messages.error(
+                request,
+                "Sorry, this appointment time has already been booked."
+            )
+
+            return redirect("contact")
+
+        Appointment.objects.create(
+            name=name,
+            email=email,
+            service=service,
+            appointment_date=appointment_date,
+            appointment_time=appointment_time,
+            message=message
         )
 
-        messages.success(request, f'Hi {name}, Thanks for contacting us. We will follow up with you within next few business days.')
-        return redirect('contact')
-    else:
-        return render(request, 'website/contact.html')
+        messages.success(
+            request,
+            "Your appointment has been booked successfully!"
+        )
 
+        return redirect("contact")
 
+    return render(request, "website/contact.html")

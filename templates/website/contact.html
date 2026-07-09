@@ -3,99 +3,189 @@
 
 {% block content %}
 
-  <!-- ***** Breadcrumb Area Start ***** -->
-  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+<!-- ***** Breadcrumb Area Start ***** -->
+<div class="breadcumb-area bg-img bg-gradient-overlay"
+     style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
     <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12">
-          <h2 class="title">Contact</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="breadcumb--con">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Contact</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Breadcrumb Area End ***** -->
-
-  <!-- ***** Contact Area Start ***** -->
-  <section class="dento-contact-area mt-50 mb-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="google-maps mb-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2062703553424!2d103.84865230890811!3d1.27848885066413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19120a70b26f%3A0x47f7d3d06515a0cc!2sRobinson%20Rd%2C%20Singapore!5e0!3m2!1sen!2smm!4v1589272913048!5m2!1sen!2smm" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-12 col-md-4">
-          <div class="contact-information">
-            <h5>Address</h5>
-            <p>28 Jackson Street, Chicago, 7788569 USA</p>
-
-            <h5>Phone</h5>
-            <p>+84. 2252. 2250. 122</p>
-
-            <h5>Fax</h5>
-            <p>+84. 2252. 2250. 125</p>
-
-            <h5>Email</h5>
-            <p class="mb-0">info.dento@gmail.com</p>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="col-12 col-md-8">
-          <div class="contact-form">
-            <!-- Section Heading -->
-            <div class="section-heading">
-              <h2>Get In Touch</h2>
-              <div class="line"></div>
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <h2 class="title">Book Appointment</h2>
             </div>
-            {% if messages %}
-              <ul class="messages">
-                {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                {% endfor %}
-              </ul>
-            {% else %}
-              <!-- Form -->
-              <form action="{% url 'contact' %}" method="post">
-                {% csrf_token %}
-                <div class="row">
-                  <div class="col-lg-6">
-                    <input type="text" name="message_name" class="form-control mb-30" placeholder="Your Name">
-                  </div>
-                  <div class="col-lg-6">
-                    <input type="email" name="message_email" class="form-control mb-30" placeholder="Your Email">
-                  </div>
-                  <div class="col-12">
-                    <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="btn dento-btn">Send Message</button>
-                  </div>
-                </div>
-              </form>
-            {% endif %}
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  <!-- ***** Contact Area End ***** -->
+</div>
+
+<div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{% url 'home' %}">
+                                <i class="fa fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Book Appointment
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
+
+
+<!-- ***** Contact Area Start ***** -->
+<section class="dento-contact-area mt-50 mb-100">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Clinic Information -->
+            <div class="col-12 col-md-4">
+
+                <div class="contact-information">
+
+                    <h5>Address</h5>
+                    <p>28 Jackson Street, Chicago, 7788569 USA</p>
+
+                    <h5>Phone</h5>
+                    <p>+84 2252 2250 122</p>
+
+                    <h5>Email</h5>
+                    <p>info.dento@gmail.com</p>
+
+                    <h5>Working Hours</h5>
+                    <p>Saturday - Thursday<br>8:00 AM - 5:00 PM</p>
+
+                </div>
+
+            </div>
+
+            <!-- Appointment Form -->
+            <div class="col-12 col-md-8">
+
+                <div class="contact-form">
+
+                    <div class="section-heading">
+                        <h2>Book an Appointment</h2>
+                        <div class="line"></div>
+                    </div>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success mb-4">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form-control mb-30"
+                                    placeholder="Your Name"
+                                    required>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form-control mb-30"
+                                    placeholder="Your Email"
+                                    required>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <select
+                                    name="service"
+                                    class="form-control mb-30"
+                                    required>
+
+                                    <option value="">Select a Service</option>
+
+                                    <option value="home_whitening">Teeth Whitening at Home - $115</option>
+                                    <option value="clinic_whitening">Teeth Whitening at Clinic - $100</option>
+                                    <option value="ceramic_crown">Ceramic Crowns & Fillings - $99</option>
+                                    <option value="remove_bridge">Remove Crowns & Bridges - $50</option>
+                                    <option value="gum_recession">Cover Gum Recession - $400</option>
+                                    <option value="consultation">Consultation - $35</option>
+                                    <option value="remove_inlay">Removal of Old Crown - $99</option>
+                                    <option value="overlay_whitening">Overlay Whitening - $170</option>
+                                    <option value="implant_crown">Implant Crown - $499</option>
+                                    <option value="implant">Dental Implant - $600</option>
+
+                                </select>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <input
+                                    type="date"
+                                    name="appointment_date"
+                                    class="form-control mb-30"
+                                    required>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <select
+                                    name="appointment_time"
+                                    class="form-control mb-30"
+                                    required>
+
+                                    <option value="">Select Time</option>
+
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="01:00">01:00 PM</option>
+                                    <option value="02:00">02:00 PM</option>
+                                    <option value="03:00">03:00 PM</option>
+                                    <option value="04:00">04:00 PM</option>
+                                    <option value="05:00">05:00 PM</option>
+
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <textarea
+                                    name="message"
+                                    class="form-control mb-30"
+                                    rows="6"
+                                    placeholder="Additional Notes"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button
+                                    type="submit"
+                                    class="btn dento-btn">
+
+                                    Book Appointment
+
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 {% endblock %}
