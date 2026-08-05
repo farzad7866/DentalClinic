@@ -39,6 +39,9 @@ class Appointment(models.Model):
         ("03:00", "03:00 PM"),
         ("04:00", "04:00 PM"),
         ("05:00", "05:00 PM"),
+        ("06:00", "06:00 PM"),
+        ("07:00", "07:00 PM"),
+        ("08:00", "08:00 PM"),
     ]
 
 
@@ -54,6 +57,8 @@ class Appointment(models.Model):
     # Django automatically validates that this is a valid email.
     email = models.EmailField()
 
+    # Patient's phone number.
+    phone = models.CharField(max_length=20, blank=True, null=True)
 
     # ==========================
     # APPOINTMENT INFORMATION

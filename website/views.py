@@ -1,3 +1,5 @@
+from urllib import request
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -45,10 +47,11 @@ def contact(request):
             )
 
             return redirect("contact")
-
+        phone = request.POST.get("phone")
         Appointment.objects.create(
             name=name,
             email=email,
+            phone=phone,
             service=service,
             appointment_date=appointment_date,
             appointment_time=appointment_time,
