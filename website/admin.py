@@ -26,8 +26,4 @@ class AppointmentAdmin(admin.ModelAdmin):
         "phone",
     )
 
-    ordering = (
-        "-created_at",
-    )
-
-    list_per_page = 20
+    list_editable = ("status"
