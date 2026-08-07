@@ -17,7 +17,7 @@ class AppointmentAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
-        "status"
+        "status",
         "service",
         "appointment_date",
     )
