@@ -26,4 +26,4 @@ class AppointmentAdmin(admin.ModelAdmin):
         "phone",
     )
 
-    list_editable = ("status"
+    list_editable = ("status",)
