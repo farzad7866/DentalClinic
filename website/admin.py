@@ -2,4 +2,32 @@ from django.contrib import admin
 from .models import Appointment
 
 
-admin.site.register(Appointment)
+@admin.register(Appointment)
+class AppointmentAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "name",
+        "phone",
+        "email",
+        "service",
+        "appointment_date",
+        "appointment_time",
+        "created_at",
+    )
+
+    list_filter = (
+        "service",
+        "appointment_date",
+    )
+
+    search_fields = (
+        "name",
+        "email",
+        "phone",
+    )
+
+    ordering = (
+        "-created_at",
+    )
+
+    list_per_page = 20
