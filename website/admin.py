@@ -12,10 +12,12 @@ class AppointmentAdmin(admin.ModelAdmin):
         "service",
         "appointment_date",
         "appointment_time",
+        "status",
         "created_at",
     )
 
     list_filter = (
+        "status"
         "service",
         "appointment_date",
     )
