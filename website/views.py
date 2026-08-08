@@ -57,11 +57,7 @@ def contact(request):
             appointment_time=appointment_time,
             message=message
         )
-        print("EMAIL HOST:", conf_settings.EMAIL_HOST)
-        print("EMAIL PORT:", conf_settings.EMAIL_PORT)
-        print("EMAIL USER:", conf_settings.EMAIL_HOST_USER)
-        print("EMAIL PASSWORD SET:", bool(conf_settings.EMAIL_HOST_PASSWORD))
-
+  
         # Email to admin
         send_mail(
             subject="New Appointment Received",
