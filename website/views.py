@@ -77,7 +77,7 @@ def contact(request):
             """,
             from_email=conf_settings.EMAIL_HOST_USER,
             recipient_list=[conf_settings.EMAIL_HOST_USER],
-            fail_silently=False,
+            fail_silently=True,
         )
 
         # Email to customer
@@ -101,7 +101,7 @@ def contact(request):
             """,
             from_email=conf_settings.EMAIL_HOST_USER,
             recipient_list=[email],
-            fail_silently=False,
+            fail_silently=True,
         )
 
         messages.success(
