@@ -146,6 +146,8 @@ EMAIL_HOST_USER = os.environ.get('DJANGO_EMAIL_TESTING_ACCOUNT_NAME')
 EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_TESTING_ACCOUNT_PASSWORD')
 EMAIL_USE_TLS = True
 
+IS_RENDER = os.environ.get("RENDER") == "true"
+
 # Email settings (Local Testing)
 # python -m smtpd -n -c DebuggingServer localhost:1025
 # run above command from new command line interface - this will set up new server

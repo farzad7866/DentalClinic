@@ -57,52 +57,54 @@ def contact(request):
             appointment_time=appointment_time,
             message=message
         )
-  
-        # Email to admin
-        send_mail(
-            subject="New Appointment Received",
-            message=f"""
-            A new appointment has been booked.
 
-            Name: {name}
-            Email: {email}
-            Phone: {phone}
+        if not conf_settings.IS_RENDER:
 
-            Service: {service}
-            Date: {appointment_date}
-            Time: {appointment_time}
+            # Email to admin
+            send_mail(
+                subject="New Appointment Received",
+                message=f"""
+A new appointment has been booked.
 
-            Message:
-            {message}
-            """,
-            from_email=conf_settings.EMAIL_HOST_USER,
-            recipient_list=[conf_settings.EMAIL_HOST_USER],
-            fail_silently=True,
-        )
+Name: {name}
+Email: {email}
+Phone: {phone}
 
-        # Email to customer
-        send_mail(
-            subject="Your Appointment Has Been Booked",
-            message=f"""
-            Dear {name},
+Service: {service}
+Date: {appointment_date}
+Time: {appointment_time}
 
-            Thank you for booking an appointment with PAYAM-E SEHAT DENTAL CLINIC.
+Message:
+{message}
+""",
+                from_email=conf_settings.EMAIL_HOST_USER,
+                recipient_list=[conf_settings.EMAIL_HOST_USER],
+                fail_silently=True,
+            )
 
-            Here are your appointment details:
+            # Email to customer
+            send_mail(
+                subject="Your Appointment Has Been Booked",
+                message=f"""
+Dear {name},
 
-            Service: {service}
-            Date: {appointment_date}
-            Time: {appointment_time}
+Thank you for booking an appointment with PAYAM-E SEHAT DENTAL CLINIC.
 
-            If you need to change or cancel your appointment, please contact us.
+Here are your appointment details:
 
-            Thank you,
-            PAYAM-E SEHAT DENTAL CLINIC
-            """,
-            from_email=conf_settings.EMAIL_HOST_USER,
-            recipient_list=[email],
-            fail_silently=True,
-        )
+Service: {service}
+Date: {appointment_date}
+Time: {appointment_time}
+
+If you need to change or cancel your appointment, please contact us.
+
+Thank you,
+PAYAM-E SEHAT DENTAL CLINIC
+""",
+                from_email=conf_settings.EMAIL_HOST_USER,
+                recipient_list=[email],
+                fail_silently=True,
+            )
 
         messages.success(
             request,
