@@ -85,24 +85,11 @@ class Appointment(models.Model):
 
 
     # ==========================
-    # OPTIONAL MESSAGE
-    # ==========================
 
     # The patient can leave extra information.
     # blank=True means this field is optional.
     message = models.TextField(blank=True)
 
-    STATUS_CHOICES = [
-    ("pending", "Pending"),
-    ("confirmed", "Confirmed"),
-    ("cancelled", "Cancelled"),
-]
-
-    status = models.CharField(
-    max_length=20,
-    choices=STATUS_CHOICES,
-    default="pending",
-)
 
     # ==========================
     # RECORD CREATION DATE
