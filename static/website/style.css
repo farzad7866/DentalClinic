@@ -1532,4 +1532,10 @@ ul {
     height: 110px;
     padding: 15px; }
 
+    /* Fix appointment date field on mobile */
+  .contact-form input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; }
+
 /*# sourceMappingURL=style.css.map */
