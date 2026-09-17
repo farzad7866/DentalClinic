@@ -1531,14 +1531,44 @@ ul {
   .contact-form textarea.form-control {
     height: 110px;
     padding: 15px; }
-
-  /* Fix appointment date field on mobile */
-.contact-form input[type="date"] {
+/* Appointment date field - mobile fix */
+.appointment-date-field {
+    position: relative;
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    appearance: none;
 }
+.appointment-date-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px !important;
+}
+.date-placeholder {
+    display: none;
+}
+@media only screen and (max-width: 767px) {
+    .appointment-date-field {
+        width: calc(100% - 30px);
+    }
+
+    .appointment-date-input {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin-bottom: 30px !important;
+    }
+    .date-placeholder {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 23px;
+        color: #707070;
+        font-size: 13px;
+        font-style: italic;
+        pointer-events: none;
+    }
+    .appointment-date-input:valid + .date-placeholder {
+        display: none;
+    }
+}
+
 /*# sourceMappingURL=style.css.map */
