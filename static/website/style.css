@@ -1540,4 +1540,13 @@ ul {
     }
 }
 
+.contact-information p a,
+.contact-information p a:visited,
+.contact-information p a:hover,
+.contact-information p a:focus,
+.contact-information p a:active {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
