@@ -1549,4 +1549,70 @@ ul {
     -webkit-text-fill-color: #ffffff !important;
     text-decoration: none;
 }
+
+/* Purple moving dental services banner */
+.clinic-marquee {
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #40204f;
+    color: #fff;
+    direction: ltr;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.clinic-marquee-track {
+    display: flex;
+    width: max-content;
+    flex-shrink: 0;
+    animation: clinic-marquee-scroll 45s linear infinite;
+}
+
+.clinic-marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 12px;
+    padding-right: 12px;
+    white-space: nowrap;
+}
+
+.clinic-marquee-group span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.clinic-marquee-group span[lang="fa"] {
+    color: #e6d6f3;
+    font-weight: 500;
+}
+
+.clinic-marquee-group i {
+    width: 5px;
+    height: 5px;
+    flex: 0 0 5px;
+    border-radius: 50%;
+    background: #d8b66a;
+}
+
+@keyframes clinic-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (max-width: 576px) {
+    .clinic-marquee { height: 32px; }
+    .clinic-marquee-group { gap: 9px; }
+    .clinic-marquee-group span { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .clinic-marquee-track { animation: none; }
+}
+
 /*# sourceMappingURL=style.css.map */
