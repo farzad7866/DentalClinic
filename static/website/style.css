@@ -299,7 +299,7 @@ ul {
     border: 3px;
     border-style: solid;
     border-color: transparent;
-    border-top-color: #00aeef;
+    border-top-color: #7B1FA2;
     -webkit-animation: dentorotate 2400ms linear infinite;
     animation: dentorotate 2400ms linear infinite;
     z-index: 999; }
@@ -314,7 +314,7 @@ ul {
       border: 3px;
       border-style: solid;
       border-color: transparent;
-      border-top-color: #00aeef;
+      border-top-color: #7B1FA2;
       -webkit-animation: dentorotate 2700ms linear infinite;
       animation: dentorotate 2700ms linear infinite; }
     #preloader #dento-load:after {
@@ -328,7 +328,7 @@ ul {
       border: 3px;
       border-style: solid;
       border-color: transparent;
-      border-top-color: #00aeef;
+      border-top-color: #7B1FA2;
       -webkit-animation: dentorotate 1800ms linear infinite;
       animation: dentorotate 1800ms linear infinite; }
 
@@ -368,7 +368,7 @@ ul {
   .section-heading .line {
     width: 70px;
     height: 4px;
-    background-color: #00aeef; }
+    background-color: #7B1FA2; }
   .section-heading.text-center .line {
     margin: 0 auto; }
   .section-heading.white h2 {
@@ -380,8 +380,8 @@ ul {
   line-height: 42px;
   right: 0;
   width: 40px;
-  background-color: #00aeef;
-  color: #ffffff;
+  background-color: var(--primary-purple);
+  color: var(--brand-white);
   text-align: center;
   height: 40px;
   -webkit-transition-duration: 500ms;
@@ -389,7 +389,7 @@ ul {
   transition-duration: 500ms;
   border-radius: 2px 0 0 2px; }
   #scrollUp:focus, #scrollUp:hover {
-    background-color: #000; }
+    background-color: #5e3475; }
 
 .dento-btn {
   position: relative;
@@ -405,11 +405,11 @@ ul {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 2px;
-  background-color: #00aeef;
+  background-color: var(--primary-purple);
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  border: 2px solid #00aeef; }
+  border: 2px solid var(--primary-purple); }
   @media only screen and (max-width: 767px) {
     .dento-btn {
       min-width: 120px;
@@ -421,10 +421,10 @@ ul {
   .dento-btn.active, .dento-btn:focus, .dento-btn:hover {
     box-shadow: none;
     background-color: transparent;
-    color: #00aeef; }
+    color: var(--primary-purple); }
   .dento-btn.btn-2:focus, .dento-btn.btn-2:hover {
     background-color: #ffffff;
-    color: #00aeef; }
+    color: var(--primary-purple); }
   .dento-btn.booking-btn {
     color: #ffffff !important;
     font-weight: 600;
@@ -436,7 +436,7 @@ ul {
       font-size: 12px;
       font-weight: 600;
       background-color: #ffffff;
-      color: #00aeef !important; }
+      color: var(--primary-purple) !important; }
 
 .header-area {
   position: relative;
@@ -465,7 +465,7 @@ ul {
     font-size: 12px;
     color: #707070; }
     .top-header-area .top-header-content a i {
-      color: #00aeef;
+      color: #7B1FA2;
       margin-right: 5px; }
     .top-header-area .top-header-content a:last-child {
       margin-left: 30px; }
@@ -481,7 +481,7 @@ ul {
     font-size: 14px;
     margin-left: 10px; }
     .top-header-area .top-header-social-info a:focus, .top-header-area .top-header-social-info a:hover {
-      color: #00aeef; }
+      color: #7B1FA2; }
 
 .classy-nav-container {
   background-color: transparent; }
@@ -504,7 +504,7 @@ ul {
       font-size: 14px;
       text-transform: uppercase; }
       .classy-nav-container .classy-navbar .classynav ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li a:hover {
-        color: #00aeef; }
+        color: #7B1FA2; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           padding: 0 10px;
@@ -680,10 +680,10 @@ ul {
         font-size: 14px;
         text-align: center;
         line-height: 40px;
-        color: #00aeef;
+        color: #7B1FA2;
         margin: 0 7px; }
         .single-dentist-area .dentist-content .dentist-social-info a:focus, .single-dentist-area .dentist-content .dentist-social-info a:hover {
-          background-color: #00aeef;
+          background-color: #7B1FA2;
           color: #ffffff; }
     .single-dentist-area .dentist-content .dentist-info {
       width: 100%;
@@ -736,7 +736,7 @@ ul {
   z-index: 1; }
   .dento-price-table table thead tr > td,
   .dento-price-table table thead tr > th {
-    background-color: #00aeef;
+    background-color: #7B1FA2;
     color: #ffffff; }
   .dento-price-table table tr > td,
   .dento-price-table table tr > th {
@@ -770,7 +770,7 @@ ul {
       .single-service h6 {
         font-size: 13px; } }
   .single-service:focus h6, .single-service:hover h6 {
-    color: #00aeef; }
+    color: #7B1FA2; }
 
 .single-service--area {
   position: relative;
@@ -813,7 +813,7 @@ ul {
     width: 60px;
     height: 60px;
     color: #ffffff;
-    background-color: #00aeef;
+    background-color: #7B1FA2;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -823,7 +823,7 @@ ul {
     line-height: 60px;
     font-size: 20px; }
     .dento-video-area .video-play-button:focus, .dento-video-area .video-play-button:hover {
-      background-color: #000;
+      background-color: #7B1FA2 !important;
       color: #ffffff; }
 
 .single-skills-area {
@@ -859,7 +859,7 @@ ul {
   z-index: 1; }
   .single-cta i {
     font-size: 50px;
-    color: #00aeef;
+    color: #7B1FA2;
     margin-bottom: 15px;
     display: block; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -900,12 +900,12 @@ ul {
     position: relative;
     width: 0;
     height: 100%;
-    background: #333;
+    background: #7B1FA2 !important;
     z-index: 1; }
   .barfiller .tipWrap {
     display: none; }
   .barfiller .tip {
-    margin-top: -35px;
+    margin-top: -35px; 
     padding: 0;
     font-size: 16px;
     color: #333333;
@@ -1379,7 +1379,7 @@ ul {
     margin-bottom: 25px;
     display: block; }
   .single-footer-widget p {
-    color: #ffffff; }
+    color: var(--brand-white); }
   .single-footer-widget .footer-contact {
     position: relative;
     z-index: 1; }
@@ -1389,7 +1389,7 @@ ul {
       .single-footer-widget .footer-contact p i {
         display: inline-block;
         margin-right: 5px;
-        color: #00aeef; }
+        color: var(--primary-purple); }
       .single-footer-widget .footer-contact p:last-child {
         margin-bottom: 0; }
   .single-footer-widget .opening-hours {
@@ -1402,7 +1402,7 @@ ul {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      color: #ffffff;
+      color: var(--brand-white);
       margin-bottom: 17px;
       font-size: 14px; }
       .single-footer-widget .opening-hours li:last-child {
@@ -1429,7 +1429,7 @@ ul {
         margin-bottom: 17px;
         display: block; }
         .single-footer-widget .quick-links li a:focus, .single-footer-widget .quick-links li a:hover {
-          color: #00aeef; }
+          color: #7B1FA2; }
       .single-footer-widget .quick-links li:last-child a {
         margin-bottom: 0; }
   .single-footer-widget .footer-newsletter-form {
@@ -1448,8 +1448,8 @@ ul {
     .single-footer-widget .footer-newsletter-form button {
       width: auto;
       padding: 0 15px;
-      background-color: #00aeef;
-      color: #ffffff;
+      background-color: var(--primary-purple);
+      color: var(--brand-white);
       border: none;
       border-radius: 0 2px 2px 0;
       line-height: 40px;
@@ -1463,11 +1463,11 @@ ul {
       -o-transition-duration: 500ms;
       transition-duration: 500ms; }
       .single-footer-widget .footer-newsletter-form button:focus, .single-footer-widget .footer-newsletter-form button:hover {
-        background-color: #000;
-        color: #ffffff; }
+        background-color: var(--dark-purple);
+        color: var(--brand-white); }
   .single-footer-widget .footer-social-info a {
     display: inline-block;
-    color: #ffffff;
+    color: var(--brand-white);
     margin-right: 20px; }
 
 .copywrite-content {
@@ -1482,9 +1482,9 @@ ul {
     margin-bottom: 0; }
     .copywrite-content p span {
       font-weight: 500;
-      color: #ffffff; }
+      color: var(--brand-white); }
     .copywrite-content p a {
-      color: #ffffff; }
+      color: var(--brand-white); }
 
 .dento-contact-area {
   position: relative;
@@ -1506,15 +1506,15 @@ ul {
   position: relative;
   z-index: 1;
   padding: 30px 50px;
-  background-color: #00aeef;
+  background-color: var(--primary-purple);
   border-radius: 3px; }
   @media only screen and (max-width: 767px) {
     .contact-information {
       margin-bottom: 100px; } }
   .contact-information h5 {
-    color: #ffffff; }
+    color: var(--brand-white); }
   .contact-information p {
-    color: #ffffff; }
+    color: var(--brand-white); }
 
 .contact-form {
   position: relative;
@@ -1527,7 +1527,7 @@ ul {
     font-style: italic; }
     .contact-form .form-control:focus {
       box-shadow: none;
-      border-color: #00aeef; }
+      border-color: var(--primary-purple); }
   .contact-form textarea.form-control {
     height: 110px;
     padding: 15px; }
@@ -1545,8 +1545,8 @@ ul {
 .contact-information p a:hover,
 .contact-information p a:focus,
 .contact-information p a:active {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+    color: var(--brand-white) !important;
+    -webkit-text-fill-color: var(--brand-white) !important;
     text-decoration: none;
 }
 
@@ -1557,7 +1557,7 @@ ul {
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: #40204f;
+    background: #7B1FA2;
     color: #fff;
     direction: ltr;
     box-sizing: border-box;
@@ -1614,5 +1614,51 @@ ul {
 @media (prefers-reduced-motion: reduce) {
     .clinic-marquee-track { animation: none; }
 }
+
+/* ==============================
+   PAYAM-E SEHAT BRAND COLORS
+================================ */
+
+:root {
+    --primary-purple: #7B1FA2;
+    --dark-purple: #4A1264;
+    --medium-purple: #9C4DCC;
+    --light-purple: #F3E8F8;
+    --brand-white: #FFFFFF;
+}
+
+/* Purple Booking Now Button */
+.dento-btn.booking-btn {
+    background-color: var(--primary-purple) !important;
+    border-color: var(--primary-purple) !important;
+    color: var(--brand-white) !important;
+}
+
+/* Hover and Focus */
+.dento-btn.booking-btn:hover,
+.dento-btn.booking-btn:focus,
+.dento-btn.booking-btn:active {
+    background-color: #641A86 !important;
+    border-color: #641A86 !important;
+    color: #ffffff !important;
+}
+/* Force Booking Now button to purple */
+a.btn.dento-btn.booking-btn,
+a.btn.dento-btn.booking-btn:visited {
+    background: #7B1FA2 !important;
+    background-color: #7B1FA2 !important;
+    border-color: #7B1FA2 !important;
+    color: #FFFFFF !important;
+}
+
+a.btn.dento-btn.booking-btn:hover,
+a.btn.dento-btn.booking-btn:focus,
+a.btn.dento-btn.booking-btn:active {
+    background: #641A86 !important;
+    background-color: #641A86 !important;
+    border-color: #641A86 !important;
+    color: #FFFFFF !important;
+}
+/* Change Book Appointment button to purple */
 
 /*# sourceMappingURL=style.css.map */
